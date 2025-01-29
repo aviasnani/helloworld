@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const weight = () => {
+            let weight = document.getElementById("bw").value; 
+        
+            if (weight > 15) {
+                alert("Overweight");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Exercise 1</h1>
+    <h3>
+        enter baggage weight if the weight is more than 15 kgs , it must show overweight</h3>
+    <input type="number" id="bw" placeholder="Enter weight">
+    <button onclick="weight()">Check Weight</button>
+</body>
+</html>
