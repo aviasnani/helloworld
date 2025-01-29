@@ -14,19 +14,24 @@
                 alert("Perfect!");
             }
         }
-        const checkSum = () => {
+        const checkSum1 = () => {
             let a = document.getElementById("a").value;
             let b = document.getElementById("b").value;
             let n = document.getElementById("n").value;
-            let sum = 0;
-            for(let i=0;i<n;i++){
-                if(i%a==0 || i%b==0){
-                    sum += i;
-                }
+            alert(checkSum(a,b,n)); 
             
-            }
-            alert(sum);
         }
+        const checkSum = (a,b,n) => {
+            sum = 0;
+            for (let i=0; i<n; i++){
+                if(i%a==0 || i%b==0){
+                    sum+=i;
+                }
+            }
+            return sum;
+            
+        }
+
     </script>
 </head>
 <body>
@@ -40,6 +45,6 @@
     <input type="number" name="number1" id="a" placeholder="enter the first number"> <br>
     <input type="number" name="number2" id="b" placeholder="enter the second number"> <br>
     <input type="number" name="target" id="n" placeholder="Enter the target n"> <br>
-    <button onclick="checkSum()">Sum</button>
+    <button onclick="checkSum1()">Sum</button>
 </body>
 </html>
