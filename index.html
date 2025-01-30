@@ -17,16 +17,17 @@
         const checkSum1 = () => {
             let a = document.getElementById("a").value;
             let b = document.getElementById("b").value;
-            let n = document.getElementById("n").value;
-            alert(checkSum(a,b,n)); 
+            let l = document.getElementById("l").value;
+            alert(checkSum(a,b,l)); 
             
         }
-        const checkSum = (a,b,n) => {
-            let sum = 0;
+        const checkSum = (a,b,l) => {
+            let multiples = [];
             for (let i=0; i<n; i++){
                 if(i%a==0 || i%b==0){
-                    sum+=i;
+                    multiples.push[i]
                 }
+                let sum = multiples.reduce((acc, num) => acc + num, 0);
             }
             return sum;
             
@@ -44,7 +45,7 @@
     <h3>Enter two numbers, a and b, and calculate the sum of their multiples up to the target number, n.</h3>
     <input type="number" name="number1" id="a" placeholder="enter the first number"> <br>
     <input type="number" name="number2" id="b" placeholder="enter the second number"> <br>
-    <input type="number" name="target" id="n" placeholder="Enter the target n"> <br>
+    <input type="number" name="target" id="l" placeholder="Enter the target n"> <br>
     <button onclick="checkSum1()">Sum</button>
 </body>
 </html>
