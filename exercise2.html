@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <script>
+        const finalSum = () => {
+            alert(sum(a,b,n))
+        }
+        const sum = (a, b, n) => {
+            let sum = 0;
+            n = 1000;
+            a = document.getElementById('a').value;
+            b = document.getElementById('b').value;
+            for(let i=0;i<n;i++){
+                if(i%a==0 || i%b==0){
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Exercise 2</h1>
+    <h3>Enter two numbers, a and b, and calculate the sum of their multiples up to the target number, n.</h3>
+    <input type="number" name="number1" id="a1" placeholder="enter the first number"> <br>
+    <input type="number" name="number2" id="b1" placeholder="enter the second number"> <br>
+    <button onclick="checkSum1()">Sum</button> <br> <br>
+</body>
+</html>
