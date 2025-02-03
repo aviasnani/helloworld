@@ -3,10 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exercise 3</title>
+    <title>Exercise 3</title>
+    <script>
+        const finalSum = () => {
+            a = document.getElementById('a').value;
+            b = document.getElementById('b').value;
+            let n = document.getElementById('n').value;
+            alert(sum(a,b,n))
+        }
+        const sum = (a, b, n) => {
+            let sum = 0;
+            for(let i=0;i<n;i++){
+                if(i%a==0 || i%b==0){
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+    </script>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            color: #fff;
+        }
+        button{
+            color: black;
+            background-color: #fff;
+            width: 120;
+            height: 60px;
+            margin-top: 20px;
+        }
+        button:hover{
+            color: white;
+            background-color: black;
+            border: 1px solid white;
+        }
+    </style>
 </head>
 <body>
-    <h1>Exercise 3</h1>
-    
+    <h1>Exercise 2</h1>
+    <h3>Enter two numbers, a and b, and calculate the sum of their multiples up to the target number, n.</h3>
+    <input type="number" name="number1" id="a" placeholder="enter the first number"> <br>
+    <input type="number" name="number2" id="b" placeholder="enter the second number"> <br>
+    <input type="text" name="" id="n" placeholder="Enter target number, n">
+    <button onclick="finalSum()">Sum</button> <br> <br>
 </body>
 </html>
