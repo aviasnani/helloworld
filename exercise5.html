@@ -7,23 +7,25 @@
     <script>
         const finalSum = () => {
             let a = document.getElementById('a').value;
-            let l = document.getElementById('l').value;
+            let l = parseInt(document.getElementById('l').value);
             alert(f5(a,l));
         }
         const f5 = (a, l) => {
-            a.split(" ").map(x=>Number(x));
+            a = a.split(" ").map(x=>Number(x));
+            
             let myArr = [];
             let factors = [];
             for(let i=0;i<l;i++){
                 myArr.push(i);
             }
             for (i=0;i<myArr.length;i++){
-                if(myArr[i] % a[i] == 0){
+                if (a.some(num => myArr[i] % num === 0)){
                     factors.push(myArr[i]);
                 }
             }
-            finalArray = factors.reduce((acc, num) => acc + number, 0);
-            return finalArray;
+            finalNum = factors.reduce((acc, num) => acc + num, 0);
+            return finalNum
+            
         }
     </script>
 </head>
