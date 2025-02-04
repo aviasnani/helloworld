@@ -19,7 +19,7 @@
                 myArr.push(i);
             }
             for (i=0;i<myArr.length;i++){
-                if(a.some(num => myArr[i] % num === 0)){
+                if(myArr[i] % a[i] == 0){
                     factors.push(myArr[i]);
                 }
             }
@@ -37,7 +37,7 @@
     <p>Call the function f5 in the function called by onClick, and alert the user to the 
         returned answer when they press the button.</p>
 
-        <input type="text" name="" id="a" placeholder="enter numbers (maximum 2)">
+        <input maxlength="2" type="text" name="" id="a" placeholder="enter numbers (maximum 2)">
         <input type="text" name="" id="l" placeholder="size of array">
         <button onclick="finalSum()">Sum</button>
 </body>

@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 6</title>
+    <script>
+        const finalSum = () => {
+            let a = document.getElementById('a').value;
+            let l = parseInt(document.getElementById('l').value);
+            alert(f6(a,l));
+        }
+        const f6 = (a, l) => {
+            a = a.split(" ").map(x=>Number(x));
+            
+            let myArr = [];
+            let factors = [];
+            for(let i=0;i<l;i++){
+                myArr.push(i);
+            }
+            for (i=0;i<myArr.length;i++){
+                if(myArr[i] % a[i] == 0){
+                    factors.push(myArr[i]);
+                }
+            }
+            finalNum = factors.reduce((acc, num) => acc + number, 0);
+            return finalNum
+            
+        }
+    </script>
 </head>
 <body>
-    <h1>Exercise 6</h1>
+    <p>Exercise 6, Arrays: f6 should take array parameters and return an integer.</p>
+    <p>Create a page with a button and two wide input boxes, labelled a and l</p>
+    <p>Create a function f6 to return the sum of all the multiples of factors in a 
+        found in in l (a and l should be arrays of integers)</p>
+    <p>Call the function f6 in the function called by onClick, and alert the user to the 
+        returned answer when they press the button.</p>
+
+        <input type="text" name="" id="a" placeholder="enter numbers (maximum 2)">
+        <input type="text" name="" id="l" placeholder="size of array">
+        <button onclick="finalSum()">Sum</button>
 </body>
 </html>
