@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 5</title>
+    <script>
+        const finalSum = () => {
+            let a = document.getElementById('a').value;
+            let l = document.getElementById('l').value;
+            return f5(a, l);
+        }
+        const f5 = (a, l) => {
+            a.split(" ").map(x=>Number(x));
+            let myArr = [];
+            let factors = [];
+            for(let i=0;i<l;i++){
+                myArr.push(i);
+            }
+            for (i=0;i<myArr.length;i++){
+                if(myArr[i] % a[i] == 0){
+                    factors.push(myArr[i]);
+                }
+            }
+            finalArray = factors.reduce((acc, num) => acc + number, 0);
+            return finalArray;
+        }
+    </script>
 </head>
 <body>
     <p>Exercise 5, Arrays: f5 should take array parameters and return an integer.</p>
@@ -13,6 +35,8 @@
     <p>Call the function f5 in the function called by onClick, and alert the user to the 
         returned answer when they press the button.</p>
 
-        <input type="text" name="" id="l" placeholder="array size">
+        <input type="text" name="" id="a" placeholder="enter numbers (maximum 2)">
+        <input type="text" name="" id="l" placeholder="size of array">
+        <button onclick="finalSum()">Sum</button>
 </body>
 </html>
