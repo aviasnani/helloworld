@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exercise 4</title>
+    <script>
+        const finalSum = () => {
+            let a = parseInt(document.getElementById('a').value);
+            let b = parseInt(document.getElementById('b').value);
+            let l = parseInt(document.getElementById('l').value);
+            alert(sum(a,b,l));
+        }
+        const sum = (a, b, l) => {
+            let multiples = [];
+            let sum = 0;
+            for(let i = 0; i < l; i++){
+                if(i%a==0||i%b==0){
+                    multiples.push(i);
+                }
+            }
+            for(i=0;i<multiples.length;i++){
+                sum+=multiples[i];
+            }
+            return sum;
+
+        }
+    </script>
 </head>
 <body>
-    <h1>Exercise 4</h1>
+    <h1>Exercise 4 </p>
+    <p>Create a page with a button and three input boxes, labelled a, b and l, l should be a large input</p>
+    <p>Create a function f4 to return the sum of all the multiples of a or b in l</p>
+    <p>Call the function f4 in the function called by onClick, and alert the user to the 
+        returned answer when they press the button.</p>    
+    <input type="text" name="" id="a" placeholder="first number">
+    <input type="text" name="" id="b" placeholder="second number"> 
+    <input type="text" name="" id="l" placeholder="second number">
+    <button onclick="finalSum()">Sum</button>
+
 </body>
 </html>
