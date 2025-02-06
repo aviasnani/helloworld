@@ -15,8 +15,8 @@
             l = l.split(" ").map(y=>Number(y));
             let multiples = [];
             finalArray=[];
-            for (let i=0;i<a;i++){
-                for(let j=0;j<l;j++){
+            for (let i=0;i<a.length;i++){
+                for(let j=0;j<l.length;j++){
                     if (j%i==0){
                         multiples.push(j);
                     }
