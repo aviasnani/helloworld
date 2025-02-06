@@ -18,9 +18,11 @@
                 }
               
                     alert(f7(prices, basket))
-                }
+            
                 const  f7 = (price, basket) => {
-                    let total_price = price.apple * basket.apple + price.orange + backet.orange;
+                    let total_apple_price = price.apple * basket.apple;
+                    let total_orange_price = price.orange * basket.orange;
+                    let total_price = total_apple_price + total_orange_price;
                     return total_price
                 }
             
