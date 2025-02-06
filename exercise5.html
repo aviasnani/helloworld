@@ -12,7 +12,7 @@
         }
         const f5 = (a, l) => {
             a = a.split("").map(x=>Number(x));
-            l = l.split("").map(y=>Number(y));
+            l = l.split(",").map(y=>Number(y));
             let multiples = [];
             finalArray=[];
             for (let i=0;i<a.length;i++){
