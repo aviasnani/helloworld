@@ -17,8 +17,8 @@
             finalArray=[];
             for (let i=0;i<a.length;i++){
                 for(let j=0;j<l.length;j++){
-                    if (j%i==0){
-                        multiples.push(j);
+                    if (l[j]%a[i]==0){
+                        multiples.push(l[j]);
                     }
                 }
             }
