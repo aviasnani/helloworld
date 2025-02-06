@@ -7,25 +7,28 @@
     <script>
         const finalSum = () => {
             let a = document.getElementById('a').value;
-            let l = parseInt(document.getElementById('l').value);
+            let l = document.getElementById('l').value;
             alert(f6(a,l));
         }
         const f6 = (a, l) => {
             a = a.split(" ").map(x=>Number(x));
-            
-            let myArr = [];
-            let factors = [];
-            for(let i=0;i<l;i++){
-                myArr.push(i);
-            }
-            for (i=0;i<myArr.length;i++){
-                if(myArr[i] % a[i] == 0){
-                    factors.push(myArr[i]);
+            l = l.split(",").map(y=>Number(y));
+            let multiples = [];
+            finalArray=[];
+            for (let i=0;i<a.length;i++){
+                for(let j=0;j<l.length;j++){
+                    if (l[j]%a[i]==0){
+                        multiples.push(l[j]);
+                    }
                 }
             }
-            finalNum = factors.reduce((acc, num) => acc + number, 0);
-            return finalNum
-            
+            for(let multiple of multiples){
+                if(!finalArray.includes(multiple)){
+                    finalArray.push(multiple);
+                }
+            }
+            let sum = finalArray.reduce((acc, num)=>acc+num,0);
+            return sum;
         }
     </script>
 </head>
