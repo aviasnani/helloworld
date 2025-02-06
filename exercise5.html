@@ -11,7 +11,7 @@
             alert(f5(a,l));
         }
         const f5 = (a, l) => {
-            a = a.split("").map(x=>Number(x));
+            a = a.split(" ").map(x=>Number(x));
             l = l.split(",").map(y=>Number(y));
             let multiples = [];
             finalArray=[];
@@ -23,8 +23,8 @@
                 }
             }
             for(let multiple of multiples){
-                if(!finalArray.includes(num)){
-                    finalArray.push(num);
+                if(!finalArray.includes(multiple)){
+                    finalArray.push(multiple);
                 }
             }
             let sum = finalArray.reduce((acc, num)=>acc+num,0);
@@ -40,7 +40,7 @@
     <p>Call the function f5 in the function called by onClick, and alert the user to the 
         returned answer when they press the button.</p>
 
-        <input maxlength=2"2" type="text" name="" id="a" placeholder="enter numbers (maximum 2)">
+        <input maxlength="3" type="text" name="" id="a" placeholder="enter numbers (maximum 2)">
         <input type="text" name="" id="l" placeholder="size of array">
         <button onclick="finalSum()">Sum</button>
 </body>
