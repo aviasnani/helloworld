@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise 7</title>
     <script>
-        
-        
-                const calculateBasket = () =>{
-                    const prices={
-                    "apple": 1.25,
-                    "orange": 2.50
-                }
-                const basket = {
-                    "apple": 2,
-                    "orange": 5
-                }
+      const calculateSum = () => {
+        let basket = {
+          "apples": parseFloat(document.getElementById("apples").value) || 0,  
+          "oranges": parseFloat(document.getElementById("oranges").value) || 0,
+          "eggs": parseFloat(document.getElementById("eggs").value) || 0
+          }
+          let prices = {
+            "apples": 1.60,
+            "oranges": 1.25,
+            "eggs": 2.00
+          }
+          alert(f7(basket, prices));
+        }
+          const f7 = (basket, prices) => {
+            let sum = 0;
+            for (let item in basket) {
+              sum += basket[item] * prices[item]
               
-                    alert(f7(prices, basket))
-            
-                const  f7 = (price, basket) => {
-                    let total_apple_price = price.apple * basket.apple;
-                    let total_orange_price = price.orange * basket.orange;
-                    let total_price = total_apple_price + total_orange_price;
-                    return total_price
-                }
-            
-        </script>
-</head>
-<body>
-   <button onclick="calculateBasket()">Sum</button>
-</body>
+            }
+            return sum;
+
+          }
+    </script>
+  </head>
+  <body>
+    <h1>Exercise 7</h1>
+    <label for="apples">Apples: </label>
+    <input type="text" name="apples" id="apples" /><br /><br />
+    <label for="oranges">Oranges: </label>
+    <input type="text" name="oranges" id="oranges" /><br /><br />
+    <label for="eggs">Eggs: </label>
+    <input type="text" name="eggs" id="eggs" /><br /><br />
+    <button onclick="calculateSum()">Calculate sum</button>
+  </body>
 </html>
