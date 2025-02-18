@@ -38,10 +38,10 @@
 
 }
 const myBasket = new basket();
-myBasket.addItems(document.getElementById('prod1'), document.getElementById('quan1'));
-myBasket.addItems(document.getElementById('prod2'), document.getElementById('quan2'));
-myBasket.addItems(document.getElementById('prod3'), document.getElementById('quan3'));
-myBasket.addItems(document.getElementById('prod4'), document.getElementById('quan4'));
+myBasket.addItems(document.getElementById('prod1'), parseInt(document.getElementById('quan1')));
+myBasket.addItems(document.getElementById('prod2'), parseInt(document.getElementById('quan2')));
+myBasket.addItems(document.getElementById('prod3'), parseInt(document.getElementById('quan3')));
+myBasket.addItems(document.getElementById('prod4'), parseInt(document.getElementById('quan4')));
 
 const prices = {
   "apples": 0.50,
