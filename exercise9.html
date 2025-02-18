@@ -12,6 +12,7 @@
     <input type="text" name="" id="quan2" placeholder="quantity">
     <input type="text" name="" id="prod3" placeholder="product 3">
     <input type="text" name="" id="quan4" placeholder="quantity">
+    <button onclick="showTotal()">Pay</button>
     <script>
         class basket {
   constructor(){
@@ -47,7 +48,7 @@ const prices = {
   "eggs": 1.50
 };
 const showTotal = () => {
-    alert(myBasket.getCost(prices));
+    alert("You have to pay: $" + myBasket.getCost(prices));
 }
     </script>
 </body>
