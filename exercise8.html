@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8</title>
+</head>
+<body>
+  <button onclick="showTotal()">Total</button>
+  <script>
+        class basket {
+  constructor(){
+    this.products = {};
+
+  }
+  addItems(product, qty){
+    if (this.products[product]){
+      this.products[product] += qty;
+    } else {
+      this.products[product] = qty;
+    }
+  }
+  getCost(prices){
+    let total = 0;
+    for (let product in this.products){
+      total += this.products[product] * prices[product];
+    }
+    return total;
+  }
+
+}
+const myBasket = new basket();
+myBasket.addItems('apples', 2);
+myBasket.addItems('bananas', 3);
+myBasket.addItems('oranges', 1);
+myBasket.addItems('eggs', 1);
+
+const prices = {
+  apples: 0.50,
+  bananas: 0.25,
+  oranges: 0.75,
+  eggs: 1.50
+};
+const showTotal = () => {
+    alert(myBasket.getCost(prices));
+}
+  </script>
+</body>
+</html>
